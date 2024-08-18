@@ -16,7 +16,7 @@ def guardar_pc_info():
     pc_file = open('pc.txt', 'w')
     pc_file.write(pc_data)
     pc_file.close()
-    print("El archivo se guardó con éxito")
+    print("El archivo se guardó con éxito.")
 
 
 def leer_pc_info():
