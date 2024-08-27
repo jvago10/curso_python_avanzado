@@ -1,5 +1,6 @@
 import requests
 import json
+import webbrowser
 
 BASE_URL = 'https://pokeapi.co/api/v2/pokemon/'
 
@@ -10,7 +11,9 @@ def get_pokemon_info(pokemon_name):
 
     try:
         pokemon_data = json.loads(response.text)
-        print(pokemon_data)
+        sprites = pokemon_data['sprites']
+        pokemon_image = sprites['front_default']
+        webbrowser.open(pokemon_image)
 
     except ValueError:
         print('No se encontró el pokemon')
